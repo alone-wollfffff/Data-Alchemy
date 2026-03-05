@@ -1,0 +1,28 @@
+# Data Alchemy — Production Requirements
+# Python 3.10 recommended
+
+# Web framework
+flask
+flask-cors
+gunicorn
+werkzeug
+
+# Data
+pandas
+numpy
+openpyxl
+xlrd
+
+# ML — AutoGluon tabular (CPU-only for HuggingFace Spaces)
+autogluon.tabular
+
+# Feature engineering
+autofeat
+scikit-learn
+
+# Data exploration
+ydata-profiling
+dtale
+
+# Utilities
+setuptools>=70.0.0
