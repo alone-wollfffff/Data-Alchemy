@@ -6,7 +6,7 @@ colorTo: purple
 sdk: docker
 app_port: 7860
 pinned: false
-short_description: No-code AutoML — upload CSV, get a trained model in minutes...
+short_description:No-code AutoML, Upload CSV get trained model in minutes.
 ---
 
 # ⚗️ Data Alchemy — AutoML Platform v3.2
