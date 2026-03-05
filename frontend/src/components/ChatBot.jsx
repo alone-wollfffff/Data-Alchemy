@@ -2,20 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { X, RotateCcw, ChevronRight, ArrowLeft, Send } from 'lucide-react'
 
-// Mocking the botApi for the standalone preview environment
-const botApi = {
-  ask: async (choice) => {
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve({
-          data: {
-            response: `Here is some information about <b>${choice}</b>.<br/><br/><i>(This is a simulated backend response)</i>`
-          }
-        });
-      }, 1000);
-    });
-  }
-};
+import { botApi } from '../api/client'
 
 // ── Menu data ─────────────────────────────────────────────────────
 const SUB_MENU = {
