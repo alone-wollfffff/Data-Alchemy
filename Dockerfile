@@ -4,7 +4,7 @@
 # then Python serves everything with Flask + Gunicorn.
 
 # ── Stage 1: Build React frontend ─────────────────────────────────
-FROM node:20-slim AS frontend-builder
+FROM node:18-slim AS frontend-builder
 
 WORKDIR /build/frontend
 COPY frontend/package*.json ./
