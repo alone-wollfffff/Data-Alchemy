@@ -22,5 +22,5 @@ jobs:
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
           # Replace YOUR_HF_USERNAME and YOUR_SPACE_NAME below
-          git remote add hf https://YOUR_HF_USERNAME:${HF_TOKEN}@huggingface.co/spaces/YOUR_HF_USERNAME/data-alchemy
+          git remote add hf https://lonewollff:${HF_TOKEN}@huggingface.co/spaces/lonewollff/data-alchemy
           git push hf main --force
