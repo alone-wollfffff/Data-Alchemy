@@ -19,8 +19,21 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
+          # 1. Delete the downloaded Git history (this destroys the memory of icon.png)
+          rm -rf .git
+          
+          # 2. Start a fresh, clean Git history locally on the runner
+          git init
+          git branch -M main
+          
+          # 3. Configure Git credentials
           git config --global user.email "github-actions@github.com"
           git config --global user.name "GitHub Actions"
-          # Replace YOUR_HF_USERNAME and YOUR_SPACE_NAME below
+          
+          # 4. Stage all your current files and create a single, clean commit
+          git add .
+          git commit -m "Automated sync to Hugging Face"
+          
+          # 5. Push this brand new history to Hugging Face, overwriting what's there
           git remote add hf https://lonewollff:${HF_TOKEN}@huggingface.co/spaces/lonewollff/Data_Alchemy
           git push hf main --force
