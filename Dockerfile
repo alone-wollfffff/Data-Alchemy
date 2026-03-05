@@ -36,7 +36,8 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY app.py bot_logic.py ./
 
 # Copy built frontend into Flask static folder
-COPY --from=frontend-builder /build/frontend/dist/ ./static/dist/
+#COPY --from=frontend-builder /build/frontend/dist/ ./static/dist/
+COPY --from=frontend-builder /build/static/dist/ ./static/dist/
 
 # Create projects directory (ephemeral — wiped on each restart)
 RUN mkdir -p static/projects
