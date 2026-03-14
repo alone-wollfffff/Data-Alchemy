@@ -1,0 +1,56 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+.env
+*.env
+
+# Flask / App runtime
+static/projects/
+static/dist/
+static/*.zip
+*.zip
+
+# Node / Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+.npm/
+
+# OS
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# Secrets — never commit these
+.env.local
+.env.production
+secret_key.txt
+
+# Logs
+.logs/
+*.log
+gunicorn.log
+flask.log
+
+# Misc
+tmp/
+temp/
+*.tmp
+da_*/

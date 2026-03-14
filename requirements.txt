@@ -1,0 +1,37 @@
+# Data Alchemy — Production Requirements (FastAPI v4.0)
+# Python 3.10 recommended
+
+# ── Web framework (FastAPI replaces Flask) ──────────────────────────
+fastapi
+uvicorn[standard]          # ASGI server (replaces gunicorn sync workers)
+gunicorn                   # Process manager — uses uvicorn workers in prod
+python-multipart           # Required for FastAPI file uploads (UploadFile)
+itsdangerous               # Required by Starlette SessionMiddleware
+
+# ── Utilities still needed ───────────────────────────────────────────
+werkzeug                   # secure_filename() used in upload validation
+
+# ── Data ─────────────────────────────────────────────────────────────
+pandas
+numpy
+openpyxl
+xlrd
+
+# ── ML — AutoGluon tabular (CPU-only for HuggingFace Spaces) ────────
+autogluon.tabular
+lightgbm
+xgboost
+catboost
+torch
+fastai
+
+# ── Feature engineering ──────────────────────────────────────────────
+autofeat
+scikit-learn
+
+# ── Data exploration ─────────────────────────────────────────────────
+ydata-profiling
+dtale
+
+# ── Misc ──────────────────────────────────────────────────────────────
+setuptools<70.0.0
